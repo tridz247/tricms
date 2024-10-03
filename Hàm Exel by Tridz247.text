@@ -1,0 +1,106 @@
+#Các hàm thông dụng trong Excel by Tridz247
+
+
+● Hàm SUM
+Hàm SUM dùng để tính tổng tất cả các số có trong dãy ô mà người dùng chọn (muốn tính).
+Công thức tính của hàm SUM:
+=SUM(Number1, Number2,…)
+Ví dụ: =SUM(20,40,60) có nghĩa là cộng các số này lại với nhau và cho ra kết quả là 120.
+● Hàm MiN/MAX
+Hàm MIN/MAX dùng để tính giá trị nhỏ/ lớn nhất trong một phạm vi dữ liệu hoặc cả bảng tính.
+Công thức tính của hàm MIN/MAX
+=MIN(Number1, Number2,…)
+=MAX(Number1, Number2)
+Ví dụ: =MIN(A2:C5) sẽ cho ra kết quả là 25 – giá trị nhỏ nhất ở vùng dữ liệu mà bạn chọn.
+● Hàm COUNT/COUNTA
+COUNT :
+Để đếm các ô có chứa số trong phạm vi dữ liệu, ta dùng hàm COUNT.
+Công thức tính của hàm COUNT:
+=COUNT(Value1,…)
+Ví dụ: =COUNT(A2:C5) sẽ cho ra kết quả là 9 – tổng số lượng ô có chứa số.
+COUNTA : 
+Để đếm các ô không trống trong phạm vi dữ liệu nhất định, ta dùng hàm COUNTA.
+Công thức tính của hàm COUNTA:
+=COUNTA(Value1,…)
+Ví dụ: =COUNTA(A2:C5) sẽ cho ra kết quả là 8 – số lượng ô có chứa số hay kí tự.
+● Hàm AVERAGE
+Để tính trung bình cộng của một dãy số có trong trang tính, ta dùng hàm AVERAGE.
+Công thức tính của hàm AVERAGE:
+=AVERAGE(Number1, Number2,…)
+Ví dụ: Để tính mức lương trung bình của 6 tháng, ta dùng công thức sau: =AVERAGE(C3:C8)
+● Hàm PRODUCT
+Hàm PRODUCT thực hiện phép nhân các đối số đã chọn và trả về kết quả là tích của chúng.
+Cú pháp:
+=PRODUCT(number1, number2,…)
+Trong đó:
+number1 (Bắt buộc): Đây là số đầu tiên, tham chiếu ô hoặc phạm vi mà bạn muốn tính tích.
+number2,… (Tùy chọn): Các số, tham chiếu ô hoặc phạm vi bổ sung mà bạn muốn tính tích, tối đa là 255.
+● Hàm COUNTIF
+Để đếm ô trong một vùng dữ liệu được chọn thỏa mãn điều kiện, ta dùng hàm COUNTIF.
+Công thức tính của hàm COUNTIF:
+=COUNTIF(Range, Criteria)
+Ví dụ, khi bạn nhập công thức: =COUNTIF(C2:C11,”>150”), kết quả trả về sẽ là 8 đúng với điều kiện số lượng hàng tồn là 150 trở lên.
+● Hàm IF
+Hàm IF được dùng để kiểm tra dữ liệu có thỏa điều kiện của người dùng đặt ra hay không và cho ra kết quả trả về theo biểu thức logic đúng hoặc sai.
+Công thức tính của hàm IF:
+=IF(Logical_test, Value_if_true, Value_if_false)
+Lưu ý: Nếu người dùng bỏ trống 2 điều kiện Value_if_true, Value_if_false, giá trị là 0 nếu thỏa mãn điều kiện và sẽ trả giá trị là FALSE nếu không thỏa.
+Bạn có thể theo dõi kỹ hơn qua ví dụ ở hình dưới này, lưu ý điều kiện sẽ là: Điểm số từ 7 trở lên là Đạt, ngược lại là Không Đạt nếu điểm số dưới 7.
+● Hàm SUMIF 
+Hàm SUMIF dùng để tính tổng các giá trị thỏa điều kiện xác định.
+Công thức tính của hàm SUMIF:
+=SUMIF(range,criteria,[sum_range])
+Ví dụ: Để tính tổng số màu cam nằm trong cột A có số lượng là bao nhiêu ở cột B, ta dùng công thức: =SUMIF(A1:A8,”cam”,B1:B8).
+● Hàm LEFT/RIGHT/MID
+- Để cắt ký tự bên trái chuỗi văn bản mà mình chọn, ta sử dụng hàm LEFT.
+ Công thức tính của hàm LEFT:
+=LEFT(text,[num_chars])
+- Để tách ký tự bên phải chuỗi văn bản mà mình chọn, ta sử dụng hàm RIGHT.
+Công thức tính của hàm RIGHT:
+=RIGHT(text,[num_chars])
+- Đối với hàm MID sẽ trả về kết quả là số lượng ký tự cụ thể trong chuỗi văn bản xuất phát từ vị trí do bạn chỉ định đồng thời dựa trên số lượng ký tự mà bạn muốn.
+Công thức tính của hàm MID:
+=MID(text,[num_chars])
+● Hàm CONCAT
+Để nối hai hay nhiều văn bản thành chuỗi văn bản, ta sử dụng hàm CONCAT.
+Công thức tính của hàm CONCAT:
+=IF(Logical_test;Value_if_true;Value_if_false)
+Lưu ý: Nếu người dùng bỏ trống 2 điều kiện Value_if_true, Value_if_false, giá trị là 0 nếu thỏa mãn điều kiện và sẽ trả giá trị là FALSE nếu không thỏa.
+Ví dụ: =CONCAT(“Di”,” “,”Động”,” “,”Việt”,” “,”xin”,” “,”chào”,” “,”Quý”,” “, “khách.”) sẽ trả về kết quả: “Di Động Việt xin chào Quý khách”.
+● Hàm NOW
+Hàm NOW được dùng để hiển thị ngày và giờ hiện tại trên hệ thống hiện tại hoặc nếu bạn muốn tính toán giá trị dựa trên ngày/giờ hiện tại và update lại mỗi khi mở trang tính.
+Công thức tính của hàm NOW:
+=NOW()
+Chẳng hạn, nếu nhập =NOW() thì máy sẽ trả về kết quả ngày giờ hiện tại có trên hệ thống của bạn. Còn nếu nhập theo cú pháp =NOW()+8 thì kết quả trả về sẽ là ngày và giờ của 8 ngày trong tương lai.
+● Hàm DATE 
+Hàm DATE đưa ra kết quả số cho ngày cụ thể.
+Công thức tính của hàm DATE:
+=DATE(Year,Month,Day)
+Trong đó, Year là Năm, Month là Tháng, Day là Ngày.
+Ví dụ: =DATE(2023,7,7) trả về kết quả ngày 7 tháng 7 năm 2023.
+● Hàm VLOOKUP
+Hàm VLOOKUP được sử dụng khi cần dò tìm data trong 1 bảng, theo dãy dọc và trả về data tương ứng theo hàng ngang.
+Công thức tính của hàm VLOOKUP:
+=VLOOKUP(Lookup_value, Table_array, Col_index_ num, Range_lookup)
+Ví dụ: Để xác định mức chi trả phụ cấp cho nhân viên, bạn có thể tham khảo ở ví dụ dưới này.
+● Hàm HLOOKUP
+Hàm HLOOKUP dùng để tìm kiếm data trên dòng đầu tiên của bảng tham chiếu và trả về kết quả tương ứng trong phạm vi mà người dùng chọn.
+Công thức tính của hàm HLOOKUP:
+=HLOOKUP(Lookup_value, Table_ array, Row_index_Num, Range_lookup)
+Ví dụ: Bạn muốn xếp hạng học sinh ở Bảng 1 với dữ liệu có trong Bảng 2, ta sẽ sử dụng công thức như bên hình dưới. Điều này có nghĩa là hàm sẽ dò điểm số học sinh ở ô C4 trong Bảng 2 từ trái qua, khi chúng tìm thấy giá trị gần bằng sẽ trả về data xếp loại tương ứng ở hàng 2.
+● Hàm INDEX
+Hàm INDEX trả về kết quả giá trị hoặc tham chiếu giá trị khác có trong bảng hoặc ở phạm vi nhất định.
+Công thức tính của hàm INDEX:
+=INDEX(array, row_num, column_num)
+● Hàm MATCH
+Hàm MATCH được sử dụng để tìm kiếm và xác định vị trí tương đối của một giá trị trong 1 ô hoặc 1 mảng.
+Công thức tính của hàm MATCH:
+=Match(Lookup_value, Lookup_array, Match_type)
+● Hàm CHOOSE 
+Hàm CHOOSE trong Excel giúp bạn chọn một giá trị từ một danh sách dựa trên chỉ số được cung cấp. Nó thường được dùng để lấy dữ liệu cụ thể từ bảng hoặc danh sách theo điều kiện hoặc lựa chọn của người dùng.
+Cú pháp:
+=CHOOSE(index_num, value1, value2, …)
+Tham số:
+index_num: (Bắt buộc) Một số nguyên xác định vị trí của giá trị bạn muốn chọn trong danh sách. Giá trị này phải nằm trong khoảng từ 1 đến số lượng giá trị trong danh sách.
+value1, value2,…: (Bắt buộc) Danh sách các giá trị mà bạn muốn chọn từ. Danh sách này có thể bao gồm số, văn bản, giá trị logic hoặc hay chiếu ô.
+
